@@ -20,11 +20,10 @@ const rowOne = () => {
 
   );
 }
-console.log(rowOne());
+
 export default rowOne;
 
 
 
 
 
-// const btnKey = (id, item = '', itemtwo = '', colorbg = '', width = '50px')
