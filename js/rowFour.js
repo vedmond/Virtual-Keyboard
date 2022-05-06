@@ -1,11 +1,11 @@
 import btnKey from "./btnKey.js";
 
-const upEng = ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?'];
-const lowEng = ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'];
-const upUkr = ['Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', '?'];
-const lowUkr = ['я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '/'];
+const upEng = ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '&#129093;'];
+const lowEng = ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '&#129093;'];
+const upUkr = ['Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', '?', '&#129093;'];
+const lowUkr = ['я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '/', '&#129093;'];
 
-let [z, x, c, v, b, n, m, ukr1, ukr2, ukr0] = upEng;
+let [z, x, c, v, b, n, m, ukr1, ukr2, ukr0, arUp] = upEng;
 
 const rowFour = () => {
   return (`${btnKey('k42', 'Shift', '', 'colorbg', '120px')} 
@@ -19,7 +19,7 @@ const rowFour = () => {
   ${btnKey('k51', ukr1)}
   ${btnKey('k52', ukr2)}
   ${btnKey('k53', ukr0)}
-  ${btnKey('k54', '&#129093;', '', 'colorbg')}
+  ${btnKey('k54', arUp, '', 'colorbg')}
   ${btnKey('k55', 'Shift', '', 'colorbg', '120px')}
   `
   );
