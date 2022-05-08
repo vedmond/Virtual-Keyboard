@@ -1,13 +1,26 @@
 import btnKey from "./btnKey.js";
-
-const upEng = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '\\'];
-const lowEng = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '/'];
-const upUkr = ['Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ї', '\\'];
-const lowUkr = ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ї', '/'];
-
-let [q, w, e, r, t, y, u, i, o, p, ukr1, ukr2, ukr0] = upEng;
-
 const rowTwo = () => {
+  let capsKey = [];
+
+  const upEng = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '\\'];
+  const lowEng = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '/'];
+  const upUkr = ['Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ї', '\\'];
+  const lowUkr = ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ї', '/'];
+
+  const switchBtn = () => {
+    const capslock = localStorage.getItem('capslockKey')
+    if (capslock === 'true') {
+      capsKey = upEng;
+    } else {
+      capsKey = lowEng;
+    }
+    return capsKey
+  }
+  switchBtn()
+
+  let [q, w, e, r, t, y, u, i, o, p, ukr1, ukr2, ukr0] = capsKey;
+
+
   return (`${btnKey('k14', 'Tab', '', 'colorbg', '60px')} 
   ${btnKey('k15', q)}
   ${btnKey('k16', w)}
