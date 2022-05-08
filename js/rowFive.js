@@ -5,7 +5,7 @@ const rowFive = () => {
   return (`${btnKey('k56', 'Ctrl', '', 'colorbg')} 
   ${btnKey('k57', 'Win', '', 'colorbg')}
   ${btnKey('k58', 'Alt', '', 'colorbg')}
-  ${btnKey('k59', ' ', '', 'colorbg', '400px')}
+  ${btnKey('k59', '·', '', 'colorbg', '400px')}
   ${btnKey('k60', 'Alt', '', 'colorbg')}
   ${btnKey('k61', '&#129092;', '', 'colorbg')}
   ${btnKey('k62', '&#129095;', '', 'colorbg')}

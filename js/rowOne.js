@@ -1,13 +1,23 @@
 import btnKey from "./btnKey.js";
-
-const upEng = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='];
-const lowEng = ['~', '!', '@', '#', '$', '%', ':', '?', '*', '(', ')', '_', '+'];
-const upUkr = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='];
-const lowUkr = ['~', '!', '@', '#', '$', '%', ':', '?', '*', '(', ')', '_', '+'];
-
-let [n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12] = upEng;
-
 const rowOne = () => {
+  let capsKey = [];
+
+  const upEng = ['~', '!', '@', '#', '$', '%', ':', '?', '*', '(', ')', '_', '+'];
+  const lowEng = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='];
+  const upUkr = ['~', '!', '@', '#', '$', '%', ':', '?', '*', '(', ')', '_', '+'];
+  const lowUkr = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='];
+
+  const capslock = localStorage.getItem('capslockKey')
+  if (capslock === 'true') {
+    capsKey = upEng;
+  } else {
+    capsKey = lowEng;
+  }
+
+
+  let [n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12] = capsKey;
+
+
   return (`${btnKey('k0', n0, '', 'colorbg')} 
   ${btnKey('k1', n1)}
   ${btnKey('k2', n2)}
