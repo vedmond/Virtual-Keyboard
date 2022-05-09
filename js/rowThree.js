@@ -8,15 +8,25 @@ const rowThree = () => {
   const lowUkr = ['ф', 'і', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'є'];
 
   const switchBtn = () => {
+
     const capslock = localStorage.getItem('capslockKey')
-    if (capslock === 'true') {
+    const learn = localStorage.getItem('learn')
+    if (capslock === 'true' && learn === 'en') {
       capsKey = upEng;
-    } else {
+    }
+    if (capslock === 'false' && learn === 'en') {
       capsKey = lowEng;
     }
+    if (capslock === 'true' && learn === 'ua') {
+      capsKey = upUkr;
+    }
+    if (capslock === 'false' && learn === 'ua') {
+      capsKey = lowUkr;
+    }
+
     return capsKey
   }
-  switchBtn()
+  switchBtn();
 
   let [a, s, d, f, g, h, j, k, l, ukr1, ukr2] = capsKey;
 

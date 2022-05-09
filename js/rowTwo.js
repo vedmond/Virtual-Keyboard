@@ -1,22 +1,33 @@
 import btnKey from "./btnKey.js";
 const rowTwo = () => {
-  let capsKey = [];
+
 
   const upEng = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '\\'];
   const lowEng = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '/'];
   const upUkr = ['Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ї', '\\'];
   const lowUkr = ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ї', '/'];
 
+  let capsKey = [];
   const switchBtn = () => {
+
     const capslock = localStorage.getItem('capslockKey')
-    if (capslock === 'true') {
+    const learn = localStorage.getItem('learn')
+    if (capslock === 'true' && learn === 'en') {
       capsKey = upEng;
-    } else {
+    }
+    if (capslock === 'false' && learn === 'en') {
       capsKey = lowEng;
     }
+    if (capslock === 'true' && learn === 'ua') {
+      capsKey = upUkr;
+    }
+    if (capslock === 'false' && learn === 'ua') {
+      capsKey = lowUkr;
+    }
+
     return capsKey
   }
-  switchBtn()
+  switchBtn();
 
   let [q, w, e, r, t, y, u, i, o, p, ukr1, ukr2, ukr0] = capsKey;
 

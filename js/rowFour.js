@@ -4,21 +4,30 @@ const rowFour = () => {
 
 
   const upEng = ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '&#129093;'];
-  const lowEng = ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '&#129093;'];
+  const lowEng = ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '|', '&#129093;'];
   const upUkr = ['Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', '?', '&#129093;'];
-  const lowUkr = ['я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '/', '&#129093;'];
+  const lowUkr = ['я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '|', '&#129093;'];
 
   const switchBtn = () => {
 
     const capslock = localStorage.getItem('capslockKey')
-    if (capslock === 'true') {
+    const learn = localStorage.getItem('learn')
+    if (capslock === 'true' && learn === 'en') {
       capsKey = upEng;
-    } else {
+    }
+    if (capslock === 'false' && learn === 'en') {
       capsKey = lowEng;
     }
+    if (capslock === 'true' && learn === 'ua') {
+      capsKey = upUkr;
+    }
+    if (capslock === 'false' && learn === 'ua') {
+      capsKey = lowUkr;
+    }
+
     return capsKey
   }
-  switchBtn()
+  switchBtn();
 
   let [z, x, c, v, b, n, m, ukr1, ukr2, ukr0, arUp] = capsKey;
 
@@ -43,7 +52,3 @@ const rowFour = () => {
 export default rowFour;
 
 
-
-
-
-// const btnKey = (id, item = '', itemtwo = '', colorbg = '', width = '50px')

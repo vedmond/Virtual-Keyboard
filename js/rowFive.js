@@ -17,8 +17,3 @@ const rowFive = () => {
 
 export default rowFive;
 
-
-
-
-
-// const btnKey = (id, item = '', itemtwo = '', colorbg = '', width = '50px')
