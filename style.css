@@ -1,0 +1,149 @@
+@import url(./normalize.css);
+
+.body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper {
+  /* border: 1px solid red; */
+  margin-top: 50px;
+  width: 900px;
+  height: 890px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.write-block {
+  width: 900px;
+  height: 250px;
+}
+
+.keyboard-block {
+  width: 900px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 14px;
+  background-color: rgb(186, 183, 183);
+}
+
+.footer-block {
+
+  width: 900px;
+  height: 150px;
+}
+
+.row {
+  width: 900px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+}
+
+.btn-key {
+  border: 1px solid black;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: rgb(93, 92, 92);
+  position: relative;
+  margin: auto;
+  /**/
+
+  /* font-size: 20px;
+  font-weight: 600;
+  user-select: none; */
+
+}
+
+
+
+.btn-key-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 600;
+  user-select: none;
+
+}
+
+
+.colorbg {
+  background-color: rgb(44, 43, 43);
+}
+
+
+.btn-key:hover {
+  background-color: rgb(5, 122, 9);
+}
+
+.btn-key:active {
+  background-color: rgb(4, 126, 8);
+  border-radius: 50%;
+  box-shadow: -1px 0px 8px 30px rgba(34, 60, 80, 0.4);
+  /* transition: all 0.1s ease 0s; */
+  /* transition-property: all;
+  transition-duration: 500ms; */
+
+}
+
+textarea {
+  font-size: 30px;
+  user-select: none;
+}
+
+#k59 {
+  color: rgb(44, 43, 43);
+}
+
+.capslock-true {
+  /* background-color: rgb(4, 126, 8); */
+  color: rgb(255, 30, 30);
+}
+
+.capslock-true:hover {
+  background-color: rgb(44, 43, 43);
+  box-shadow: -1px 0px 8px 10px rgba(247, 247, 247, 0.5);
+}
+
+.capslock-false:hover {
+  background-color: rgb(44, 43, 43);
+  border-radius: 12px;
+  box-shadow: -1px 0px 8px 10px rgba(244, 144, 124, 0.3);
+}
+
+.key-style {
+  background-color: rgb(44, 43, 43);
+  box-shadow: -1px 0px 8px 10px rgba(244, 144, 124, 0.3);
+  color: rgb(255, 30, 30);
+  border-radius: 18px;
+}
+
+.key-style:hover {
+  background-color: rgb(44, 43, 43);
+}
+
+.click-keyboard {
+  background-color: rgb(4, 126, 8);
+  border-radius: 50%;
+  box-shadow: -1px 0px 8px 30px rgba(34, 60, 80, 0.4);
+}
+
+.footer-block h2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 28px;
+}
+
+.footer-block h4 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 25px;
+}
