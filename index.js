@@ -1,10 +1,5 @@
 import mainHTML from './js/mainHTML.js';
 import rowForKey from './js/rowForKey.js';
-import rowOne from './js/rowOne.js';
-import rowTwo from './js/rowTwo.js';
-import rowThree from './js/rowThree.js';
-import rowFour from './js/rowFour.js';
-import rowFive from './js/rowFive.js';
 import txtBlock from './js/txtBlock.js';
 import getBtnLitter from './js/getBtnLitter.js';
 import buildRows from './js/buildRows.js';
@@ -66,8 +61,6 @@ const eventKey = () => {
     ev.preventDefault();
     let evcode = ev.code;
 
-    console.log(ev.code);
-
     let idCode = codeKeyId(evcode)
     if (ev.repeat === 'true') {
       document.getElementById(idCode).classList.remove('click-keyboard')
@@ -77,7 +70,7 @@ const eventKey = () => {
       clickFlag = true;
     }
     if (ev.code == 'AltLeft' && clickFlag === true) {
-      console.log('cntrl + alt');
+
       clickFlag = false;
       swichLearn();
       buildRows();
@@ -181,11 +174,11 @@ const eventKey = () => {
 
 
 function toWrite(letter, id) {
-  // console.log(id);
+
   let arrText = document.getElementById('textarea').textContent
   if (letter.split('').length > 2) {
     staffKey(id)
-    // console.log(id);
+
   } else {
 
     document.getElementById('textarea').textContent = arrText + letter;
@@ -206,7 +199,7 @@ function staffKey(id) {
     let txtInner = '';
     let indx = 1;
     const arrTxt = document.getElementById('textarea').textContent.split('')
-    // console.log(arrTxt);
+
     const indxEnd = arrTxt[arrTxt.length - 1];
     if (indxEnd === '\uDC47' || indxEnd === '\uDC46' || indxEnd === '\uDC45' || indxEnd === '\uDC44') {
       indx = 2
